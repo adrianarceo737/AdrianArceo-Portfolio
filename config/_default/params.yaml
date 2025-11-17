@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: indigo
+  color: green
 
 # SEO
 marketing:
@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    description: 'Folk Artist from Sariaya, Quezon. Writing and performing original songs that express life, nature, and human experiences.'
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
@@ -32,15 +32,15 @@ header:
     enable: true
     block: 'navbar'
     fixed_to_top: true
-    show_search: true
-    show_theme_chooser: true
+    show_search: false
+    show_theme_chooser: false
     logo:
-      text: 'Your Name'
+      text: 'Rian Arceo'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Rian Arceo. All rights reserved.'
     license:
       enable: true
       allow_derivatives: false

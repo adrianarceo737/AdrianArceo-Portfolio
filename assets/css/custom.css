@@ -1,0 +1,230 @@
+/* Global Background Image for Entire Website */
+html,
+body {
+  background-image: url("/media/bg/web-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Ensure the background covers the entire viewport */
+#wrapper,
+#main-wrapper,
+.wrapper,
+main {
+  min-height: 100vh;
+}
+
+/* Ensure content is readable over background */
+main, 
+section,
+.container,
+.wrapper {
+  position: relative;
+}
+
+/* Add subtle overlay for better text readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  html,
+  body {
+    background-attachment: scroll; /* Better performance on mobile - prevents lag */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Optimize overlay for smaller screens */
+  body::before {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  html,
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+  
+  body::before {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html,
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+}
+
+/* Large screens - keep fixed attachment for parallax effect */
+@media (min-width: 1025px) {
+  html,
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* Black navbar at the top */
+.navbar,
+header,
+nav,
+[class*="navbar"],
+[class*="header"] {
+  background: #000000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Ensure navbar text is visible over background */
+.navbar a,
+.navbar .navbar-brand,
+header a,
+header .navbar-brand,
+nav a {
+  color: inherit;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle text shadow for better readability on light backgrounds */
+.navbar-brand,
+.navbar-nav a {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure dropdown menus have background if they exist */
+.navbar-dropdown,
+.navbar-menu {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-dropdown,
+  .navbar-menu {
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+}
+
+/* Card backgrounds with slight transparency for better visibility over background */
+.card,
+article,
+.hbx-card,
+[class*="card"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  article,
+  .hbx-card,
+  [class*="card"] {
+    background: rgba(0, 0, 0, 0.75) !important;
+  }
+}
+
+/* Ensure sections have proper spacing and visibility */
+section {
+  background: transparent;
+}
+
+/* Footer transparency */
+footer {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  footer {
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+/* Hide Hugo Blox Builder promotional banner/footer */
+/* Hide promotional links to Hugo Blox */
+a[href*="hugoblox.com"],
+a[href*="hugo-blox"],
+a[href*="hugoblox.com/templates"],
+a[href*="hugoblox.com/sponsor"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+}
+
+/* Hide promotional banner classes */
+[class*="blox-promo"],
+[class*="hbx-promo"],
+[class*="hugo-blox-promo"],
+[class*="made-with-blox"],
+[class*="powered-by-blox"],
+[class*="built-with-blox"],
+[data-blox="promo"],
+[data-hbx="promo"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide promotional banners in footer */
+footer a[href*="hugoblox"],
+footer a[href*="hugo-blox"],
+footer [class*="promo"],
+footer [class*="blox"][class*="promo"],
+footer [class*="hbx"][class*="promo"],
+footer [class*="made-with"],
+footer [class*="powered-by"],
+footer [class*="built-with"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide any container with promotional content */
+[class*="blox"][class*="banner"],
+[class*="hbx"][class*="banner"],
+[class*="promo-banner"],
+[class*="attribution"] {
+  display: none !important;
+}
+

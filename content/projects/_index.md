@@ -1,5 +1,5 @@
 ---
-title: 'Projects'
+title: 'Portfolio'
 date: 2024-05-19
 type: landing
 
@@ -11,14 +11,14 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: My Works
+      text: A collection of original songs, performances, and musical projects that showcase my journey as a folk artist.
       filters:
         folders:
           - projects
     design:
       view: article-grid
-      fill_image: false
+      fill_image: true
       columns: 3
       show_date: false
       show_read_time: false
